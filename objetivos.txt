@@ -1,0 +1,12 @@
+Jogo
+    estado_jogo
+    - 
+
+Palavra
+    palavra_rodada 
+    - 
+
+Jogador
+    numero_tentativa
+    - chutar_letra()
+    - incremento_tentativa()
