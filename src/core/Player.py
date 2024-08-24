@@ -1,10 +1,10 @@
+from interface import interface
+
 class Player():
-    def __init__(self, tentativa):
-        self.tentativa = tentativa
-
+    def __init__(self):
+        pass
+    
     def chutar_letra():
-        pass
-
-    def incremento_tentativa():
-        pass
+        letra = interface.solicita_letra()
+        return letra
     
