@@ -3,11 +3,13 @@ from core.Hangman import Hangman
 
 #Hangman = Hangman()
 
-def interface(tentativa):
+def interface(tentativa, palavra):
     print("\n********* Hangman *********")
     drawHangman(tentativa)
 
-    print("Palavra: ", "\n")
+    hideWord = len(palavra) * "__ "
+    print("Palavra: ", hideWord, "\n") # mostrar o tamanho da palavra
+
     print("Letras erradas: ")
     print("Letras corretas: ")
 
@@ -17,12 +19,10 @@ def solicita_letra():
 
 def letra_certa():
     print("Você acertou a letra!")
-   
     #Hangman.exibir_palavra_atual()  # printar o desenho agora com a letra inserida
 
 def letra_errada():
     print("Ops, esta letra não está na palavra!")
-    # adionar a lista de palavras erradas
 
 def letra_ja_jogada():
     print("Você já tentou essa letra. Escolha outra!\n")

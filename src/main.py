@@ -12,27 +12,20 @@ from interface import interface
 tentativa = 0           # declara e seta tentativas de jogadas como 0
 letras_erradas = []     # lista para guardar as letras erradas que foram jogadas
 letras_corretas = []    # lista para jogar as letras corretas que foram jogadas
-
-Word = Word()
-word = Word.escolhe_palavra()
-
-Hangman = Hangman()
-interface.interface(tentativa) # iniciar jogo
-
 Player = Player()
-letra = Player.chutar_letra()
+Word = Word()
 
-if Word.contem_letra(letra, word): # if true
-    interface.letra_certa()
+word = Word.escolhe_palavra()
+Hangman = Hangman(Player, Word, tentativa, letras_erradas, letras_corretas)
 
-"""
-while tentativa <=7:  # loop principal
-    
+while True:  # loop principal
+    Hangman.iniciar_jogo(tentativa, word)  # iniciar o jogo
+    letra = Player.chutar_letra()  # solicitar um chute do jogador
+    Hangman.verificar_tentativa()  # verificar a tentativa
+    # mostrar palavra atual
+    # verificar vitoria
+    Hangman.verificar_derrota()  # verificar derrota
 
-    letra = interface(tentativa)
 
-    for letra in letras_erradas:
-        pass
-
-    tentativa += 1
-"""
+if __name__ == "__main__":
+    main()
