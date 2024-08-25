@@ -1,10 +1,5 @@
 from interface import interface
 
 class Player():
-    def __init__(self): # implementar apenas para multiplayer
-        pass
-    
-    def chutar_letra():
-        letra = interface.solicita_letra()
-        return letra
-    
+    def chutar_letra(self):
+        return interface.solicita_letra()
